@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block extra_head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'account/css/style.css' %}">
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'account:home' %}">Home</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account:profile_detail' %}">Profile</a></li>
+                <li><a href="{% url 'account:profile_update' %}">Edit Profile</a></li>
+                <li><a href="{% url 'account:password_change' %}">Change Password</a></li>
+                <li><a href="{% url 'account:user_logout' %}">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'account:user_login' %}">Login</a></li>
+                <li><a href="{% url 'account:register' %}">Register</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

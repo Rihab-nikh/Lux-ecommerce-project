@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Luxury E-Commerce Website
+{% endblock %}
+
+
+
+{% block content %}
+    <section class="hero">
+        <h1>Welcome to our Luxury E-Commerce Website</h1>
+        <p>Explore our collection of high-end products and experience the ultimate in luxury shopping.</p>
+        <a href="#" class="button">Shop Now</a>
+    </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img class='imge' src="{% static 'account/images/product1.jpg' %}" alt="Product 1">
+                <h3>Product 1</h3>
+                <p class="price">$999</p>
+            </div>
+            <div class="product-card">
+                <img class='imge' src="{% static 'account/images/product1.jpg' %}" alt="Product 2">
+                <h3>Product 2</h3>
+                <p class="price">$1499</p>
+            </div>
+            <div class="product-card">
+                <img class='imge' src="{% static 'account/images/product1.jpg' %}" alt="Product 3">
+                <h3>Product 3</h3>
+                <p class="price">$1999</p>
+            </div>
+        </div>
+        <a href="#" class="button">View All Products</a>
+    </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nulla vitae velit consequat, ac vehicula arcu dignissim. Fusce euismod posuere eleifend. Nam ultricies odio non quam auctor interdum. Fusce posuere metus id augue molestie, at auctor velit convallis. Praesent eu augue id enim luctus facilisis. Curabitur in risus augue. Sed bibendum lacus vel augue tristique, vel fermentum arcu iaculis.</p>
+        <a href="#" class="button">Learn More</a>
+    </section>
+{% endblock %}
